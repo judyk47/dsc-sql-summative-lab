@@ -1,23 +1,46 @@
-Movie & Customer Sales SQL Analysis
+# Genre Performance Analysis: Ratings vs. Audience Reach (2010–2019)
 
-Two-part SQL project
+## Overview
 
-Guided business queries and open-ended exploratory analysis.
+This project explores movie genre performance from 2010 to 2019, examining the relationship between average ratings and audience engagement using IMDb data. The goal was to identify genres that perform well in quality and popularity and translate the findings into a business question.
 
-Part 1
+## Business Question
 
-Queries a wholesale model-car company's database (data.sqlite) to target promo campaigns, analyze credit limits by state, find top customers, and review product performance. Includes 3 visualizations and written reflections.
+**Do highly rated genres actually get watched, or is quality and popularity a trade-off?**
 
-Part 2
+## Key Findings
 
-Exploratory analysis of an IMDB dataset (im.db, 2010–2019 movies), looking at genre, rating, and audience reach trends. Produces a short slide deck with findings, a business question, and data cleaning notes.
+- **Drama:** Balanced audience reach and ratings, with an average rating of 6.49.
+- **Documentary:** Highest average rating (7.29), but only 173 average votes, suggesting lower audience engagement.
+- **Comedy:** Highest average votes among the highlighted genres (1,217), but a lower average rating of 5.78.
+- **Horror:** Performed poorly in both ratings and audience engagement in this analysis.
 
-Stack
+The analysis covered **145,081 movies released between 2010 and 2019**.
 
-SQLite, Pandas, Matplotlib/Seaborn
+*Note: Average votes are used as a proxy for audience engagement, not actual viewership.*
 
-Concepts
+## Data Cleaning
 
-JOINs, GROUP BY, HAVING, subqueries, aggregates (SUM/COUNT/AVG)
+- Excluded records with missing runtime and genre values.
+- Identified an extreme runtime outlier of 51,420 minutes.
+- Identified the need to split records containing multiple genres for more accurate genre comparisons.
 
-Requires data.sqlite and im.db.zip in the working directory.
+## Tools and Skills
+
+- **SQL:** Querying and exploring relational data.
+- **Python:** Data analysis and data handling.
+- **Pandas:** Data cleaning and manipulation.
+- **Data Visualization:** Communicating genre performance comparisons.
+- **Business Analysis:** Developing questions and interpreting findings.
+
+## Key Takeaway
+
+Genre performance involves a trade-off between ratings and audience engagement. Documentary films received the highest average ratings but had fewer average votes, while comedy attracted more votes despite lower ratings. Drama showed a stronger balance between the two measures.
+
+## Project Deliverables
+
+- Exploratory analysis of IMDb movie data.
+- Genre performance findings and business question.
+- Presentation summarizing results and data-cleaning considerations.
+
+Clarify the audience-reach comparisonStrengthen the business recommendation
